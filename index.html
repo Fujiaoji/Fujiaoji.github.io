@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fujiao Ji</title>
     <style>
+        /* 全局样式 */
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
@@ -19,17 +20,54 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            font-size: 32px;
+        
+        /* 导航栏样式 */
+        .navbar {
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
         }
-        .university {
-            color: purple;
-            font-size: 18px;
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
         }
-        .bio {
-            margin-top: 20px;
-            font-size: 16px;
+        .navbar a:hover {
+            color: #0073e6;
         }
+        
+        /* 下拉菜单 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 个人信息样式 */
         .profile {
             display: flex;
             align-items: center;
@@ -37,99 +75,37 @@
         }
         .profile img {
             width: 150px;
-            border-radius: 10px;
+            border-radius: 50%;
             margin-right: 20px;
+        }
+        .bio {
+            font-size: 16px;
         }
         .contact {
             margin-top: 20px;
             font-weight: bold;
         }
-        /* Navigation Bar */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color: #575757;
-        }
-        /* Dropdown */
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 20px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-            cursor: pointer;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 300px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            border-radius: 5px;
-            z-index: 1;
-        }
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 10px 15px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        /* Publications Section */
-        .publications {
-            margin-top: 20px;
-            padding: 10px;
-            background: #f4f4f4;
-            border-radius: 10px;
-        }
-        .publications h2 {
-            font-size: 22px;
-        }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
+
+    <!-- 导航栏 -->
     <div class="navbar">
-        <a href="#">Home</a>
-        <a href="#">Research</a>
+        <a href="#">About</a>
+        <a href="#">People</a>
         <div class="dropdown">
-            <button class="dropbtn">Publications ▼</button>
+            <a href="#" class="dropbtn">Publications ▼</a>
             <div class="dropdown-content">
-                <a href="#">Ji, F., & Kim, D. (2023). Phishing Website Detection Using Machine Learning. IEEE S&P.</a>
-                <a href="#">Ji, F., Zhao, Z. (2022). Anomaly Detection in Web Traffic. Journal of Cybersecurity.</a>
-                <a href="#">Kim, D., Ji, F., et al. (2021). Deep Learning for Phishing URLs. ACM CCS.</a>
+                <a href="#">Ji, F., & Kim, D. </a>
+                <a href="#">Ji, F., Zhao,</a>
+                <a href="#">Kim, D., Ji, F.</a>
             </div>
         </div>
-        <a href="#">Contact</a>
+        <a href="#">Teaching/Services</a>
+        <a href="#">Blog</a>
     </div>
 
-    <!-- Main Content -->
+    <!-- 个人简介 -->
     <div class="container">
         <h1><b>Fujiao</b> Ji</h1>
         <div class="university">University of Tennessee, Knoxville</div>
@@ -141,18 +117,11 @@
             </div>
         </div>
         <div class="contact">
-            339 Min Kao Building<br>
-            Knoxville, Tennessee
-        </div>
-        <!-- Publications Section -->
-        <div class="publications">
-            <h2>Selected Publications</h2>
-            <ul>
-                <li><b>Ji, F.</b>, & Kim, D. (2023). <i>Phishing Website Detection Using Machine Learning</i>. IEEE S&P.</li>
-                <li><b>Ji, F.</b>, Zhao, Z. (2022). <i>Anomaly Detection in Web Traffic</i>. Journal of Cybersecurity.</li>
-                <li>Kim, D., <b>Ji, F.</b>, et al. (2021). <i>Deep Learning for Phishing URLs</i>. ACM CCS.</li>
-            </ul>
+            📍 339 Min Kao Building, Knoxville, Tennessee <br>
+            ✉️ doowon@utk.edu <br>
+            🔗 <a href="#">Twitter</a> | <a href="#">Google Scholar</a> | <a href="#">CV</a>
         </div>
     </div>
+
 </body>
 </html>
