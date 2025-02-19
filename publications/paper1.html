@@ -1,25 +1,144 @@
-<!DOCTYPE html>
+
+
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ji, F., & Kim, D. (2023) - Phishing Detection</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; }
-        .container { max-width: 800px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
-    </style>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>Evaluating the Effectiveness and Robustness of Visual Similarity-based Phishing Detection Models (USENIX 2025)</title>
+
+  <!-- SEO -->
+  <meta name="author" content="Doowon Kim">
+  <meta name="keywords" content="Evaluation, Security, Phishing Detection,
+                                 Visual Similarity, USENIX 2025">
+
+  <!-- Prevent JS cache by Chrome -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 
-    <div class="container">
-        <h1>Ji, F., & Kim, D. (2023)</h1>
-        <h2>Phishing Website Detection Using Machine Learning</h2>
-        <p><b>Abstract:</b> This paper explores machine learning techniques for detecting phishing websites...</p>
-        <p><b>Authors:</b> Fujiao Ji, Doowon Kim</p>
-        <p><b>Published in:</b> IEEE Security & Privacy, 2023</p>
-        <p><b>Download:</b> <a href="paper1.pdf" target="_blank">Click here to download PDF</a></p>
-        <p><b>Back to Publications:</b> <a href="index.html">Go Back</a></p>
+  <!-- Page content -->
+  <div class="container">
+
+    <!-- Title -->
+    <div class="row mb-3">
+
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 text-center my-auto">
+        <h2>Evaluating the Effectiveness and Robustness of Visual Similarity-based Phishing Detection Models</h2>
+        <p id="page-lead" class="lead">Fujiao Ji<sup>1</sup>, Kiho Lee<sup>1</sup>, Hyungjoon Koo<sup>2</sup>, Wenhao You<sup>3</sup>, Euijin Choo<sup>3</sup>, Hyoungshick Kim<sup>3</sup>, and Doowon Kim<sup>1</sup></p>
+        <p id="page-lead" class="lead">University of Tennessee, Knoxville<sup>1</sup>, Sungkyunkwan University<sup>2</sup>, University of Alberta<sup>3</sup></p>
+        
+
+        <hr/>
+      </div>
     </div>
 
+    <!-- Project overview -->
+    <div class="row mb-3">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 my-auto">
+
+        <!-- title -->
+        <h4><strong>Abstract</strong></h4>
+
+        <!-- content -->
+        <p id="lead" class="card-text">
+            Phishing attacks pose a significant threat to Internet users, with cybercriminals elaborately replicating the visual appearance of legitimate websites to deceive victims. Visual similarity-based detection systems have emerged as an effective countermeasure, but their effectiveness and robustness in real-world scenarios have been underexplored. In this paper, we comprehensively scrutinize and evaluate the effectiveness and robustness of popular visual similarity-based anti-phishing models using a large-scale dataset of 451k real-world phishing websites. Our analyses of the effectiveness reveal that while certain visual similarity-based models achieve high accuracy on curated datasets in the experimental settings, they exhibit notably low performance on real-world datasets, highlighting the importance of real-world evaluation. Furthermore, we find that the attackers evade the detectors mainly in three ways: (1) directly attacking the model pipelines, (2) mimicking benign logos, and (3) employing relatively simple strategies such as eliminating logos from screenshots. To statistically assess the resilience and robustness of existing models against adversarial attacks, we categorize the strategies attackers employ into visible and perturbation-based manipulations and apply them to website logos. We then evaluate the models' robustness using these adversarial samples. Our findings reveal potential vulnerabilities in several models, emphasizing the need for more robust visual similarity techniques capable of withstanding sophisticated evasion attempts. We provide actionable insights for enhancing the security of phishing defense systems, encouraging proactive actions. 
+        </p>
+
+        <!-- H-bar -->
+        <hr/>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 my-auto">
+
+        <!-- title -->
+        <h4><strong>Dataset and Source Code</strong></h4>
+
+        <!-- content -->
+        <p id="lead" class="card-text">
+            Source code is publicly available in <a href="https://github.com/Fujiaoji/PhishingEval">PhishingEval</a>. The re-trained models are saved in the <a href="https://liveutk-my.sharepoint.com/:f:/g/personal/fji1_vols_utk_edu/EiDwgElIisBAjA7H5LUnAL0BZQFdvtbTjXR_c03MWsKkgw?e=6CC3dm">OneDrive</a>. Need to put the trained models into their appropriate positions.<br>
+            
+            To facilitate reproducibility and accelerate scientific progress (i.e., strengthening collective efforts in combating phishing attacks), we also share our collected datasets. 
+            The collected datasets contain 8 types:
+            <ol>
+              <li>The APWG total dataset for 25 months from July 2021 to July 2023 with domains, screenshots, and HTML (apwg451514). If you want to download this dataset, please contact us
+                through <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1FVcfAYK_zmKELJwjbD7nh2wzzvXhTXFO1Inn3-bztlfgHw/viewform?usp=dialog">this Google form</a>.</li> 
+              <li>A sampled subset of the APWG dataset (phishing4190)</li>
+              <li>A selected failed 6000 examples from APWG dataset (failed_examples_csv)</li>
+              <li>A general benign dataset covering 100 domains (archive100)</li>
+              <li>A benign dataset for 110 common brands, also used for ablation studies and manipulations (crawl_benign)</li>
+              <li>Reference lists (expand277, expand277_new, merge277, merge277_new)</li>
+              <li>A visible manipulation dataset (visible_dataset2)</li>
+              <li>A perturbed dataset (perturbated_dataset)</li>
+            </ol> 
+        </p>
+
+        <!-- H-bar -->
+        <hr/>
+      </div>
+    </div>
+
+      <!-- Collaborator logos -->
+    <div class="row mb-3">
+      <div class="offset-sm-1 offset-md-1 offset-lg-1 col-sm-10 col-md-10 col-lg-10 text-center my-auto">
+        <!-- logos -->
+        <img width="25%" src="pic/utk.png" alt="University of Tennessee, Knoxville" class="img-fluid">
+        <img width="25%" src="pic/skku.png" alt="Sungkyunkwan University" class="img-fluid">
+        <img width="23%" src="pic/ua.png" alt="University of Alberta" class="img-fluid">
+        <hr/>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <span class="text-muted">© 2025 MoA Lab @ The University of Tennessee, Knoxville.</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+<!-- Default Statcounter code for My personal website
+https://doowon.github.io -->
+<script type="text/javascript">
+var sc_project=12201168; 
+var sc_invisible=1; 
+var sc_security="ccab86b2"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12201168/0/ccab86b2/1/"
+alt="web counter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+<a href="https://statcounter.com/p12201168/?guest=1">View My
+Stats</a>
 </body>
 </html>
