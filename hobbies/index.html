@@ -1,4 +1,45 @@
 <section id="hobbies" class="section">
+  <style>
+    #hobbies .hobby-img {
+      width: 100%;
+      max-width: 260px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+
+    #hobbies .travel-img {
+      width: 100%;
+      max-width: 125px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+
+    #hobbies .hobby-card {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #hobbies .photo-caption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    #hobbies .travel-photo {
+      display: inline-block;
+      width: 48%;
+      max-width: 125px;
+      margin: 0 3px 20px 3px;
+      vertical-align: top;
+    }
+  </style>
+
   <div class="container">
     <h1>Hobbies</h1>
 
@@ -8,20 +49,29 @@
     </p>
 
     <div class="row mt-4">
-      <div class="col-md-4 mb-4">
-        <img src="pics/snowboarding.webp" alt="Snowboarding" class="img-fluid rounded-corners">
+      <div class="col-md-4 hobby-card">
         <h5 class="mt-3">Snowboarding</h5>
-        <p>I enjoy spending time on the slopes during the winter.</p>
+        <img src="pics/snowboarding.webp" alt="Snowboarding" class="hobby-img">
+        <p class="photo-caption">Ober Mountain Resort</p>
       </div>
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 hobby-card">
         <h5 class="mt-3">Tennis</h5>
         <p>I like playing tennis as a fun way to stay active.</p>
       </div>
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 hobby-card">
         <h5 class="mt-3">Travel</h5>
-        <p>I enjoy visiting new places and learning about different cultures.</p>
+
+        <div class="travel-photo">
+          <img src="pics/Tiantan.webp" alt="Temple of Heaven" class="travel-img">
+          <p class="photo-caption">Tian Tan (Temple of Heaven)</p>
+        </div>
+
+        <div class="travel-photo">
+          <img src="pics/diguodasha.webp" alt="Empire State Building" class="travel-img">
+          <p class="photo-caption">Empire State Building</p>
+        </div>
       </div>
     </div>
 
