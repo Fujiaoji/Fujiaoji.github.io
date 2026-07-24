@@ -1,4 +1,4 @@
-<section id="hobbies" class="section">
+<!-- <section id="hobbies" class="section">
   <style>
     #hobbies .hobby-img {
       width: 100%;
@@ -76,6 +76,167 @@
     </div>
 
     <p>
+      <a href="../index.html">Back to Home</a>
+    </p>
+  </div>
+</section> -->
+
+<section id="hobbies" class="section">
+  <style>
+    #hobbies .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    #hobbies h1 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    #hobbies .intro {
+      text-align: center;
+      color: #444;
+      max-width: 640px;
+      margin: 0 auto 40px auto;
+    }
+
+    /* 每个爱好一行：左文字，右图片 */
+    #hobbies .hobby-row {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    #hobbies .hobby-text {
+      flex: 1;
+      text-align: left;
+    }
+
+    #hobbies .hobby-text h5 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    #hobbies .hobby-text p {
+      color: #555;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    #hobbies .hobby-media {
+      flex: 0 0 auto;
+      display: flex;
+      gap: 14px;
+    }
+
+    #hobbies figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    #hobbies .hobby-img {
+      width: 260px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    #hobbies .travel-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    #hobbies figcaption {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 8px;
+    }
+
+    /* 窄屏时改为上下排列 */
+    @media (max-width: 700px) {
+      #hobbies .hobby-row {
+        flex-direction: column;
+        gap: 16px;
+      }
+      #hobbies .hobby-text {
+        text-align: center;
+      }
+      #hobbies .hobby-media {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    #hobbies .back-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+
+  <div class="container">
+    <h1>Hobbies</h1>
+
+    <p class="intro">
+      Outside of research, I enjoy snowboarding, playing tennis, and traveling.
+      These activities help me relax, stay active, and explore new experiences.
+    </p>
+
+    <!-- Snowboarding：左文字 右图片 -->
+    <div class="hobby-row">
+      <div class="hobby-text">
+        <h5>Snowboarding</h5>
+        <p>
+          Snowboarding is my favorite way to spend the winter. There's nothing
+          like the feeling of carving down a fresh slope on a cold, sunny morning.
+        </p>
+      </div>
+      <div class="hobby-media">
+        <figure>
+          <img src="pics/snowboarding.webp" alt="Snowboarding" class="hobby-img">
+          <figcaption>Ober Mountain Resort</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Tennis：暂时只有文字，以后有照片可以照上面的格式加 figure -->
+    <div class="hobby-row">
+      <div class="hobby-text">
+        <h5>Tennis</h5>
+        <p>
+          I like playing tennis as a fun way to stay active. It's a great mix of
+          strategy and exercise, and a nice excuse to spend time outdoors with friends.
+        </p>
+      </div>
+    </div>
+
+    <!-- Travel：左文字 右两张图 -->
+    <div class="hobby-row">
+      <div class="hobby-text">
+        <h5>Travel</h5>
+        <p>
+          I love exploring new places, from historic landmarks to modern city
+          skylines. Every trip gives me a fresh perspective and new stories to tell.
+        </p>
+      </div>
+      <div class="hobby-media">
+        <figure>
+          <img src="pics/Tiantan.webp" alt="Temple of Heaven" class="travel-img">
+          <figcaption>Tian Tan (Temple of Heaven)</figcaption>
+        </figure>
+        <figure>
+          <img src="pics/diguodasha.webp" alt="Empire State Building" class="travel-img">
+          <figcaption>Empire State Building</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <p class="back-link">
       <a href="../index.html">Back to Home</a>
     </p>
   </div>
