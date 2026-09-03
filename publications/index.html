@@ -18,12 +18,12 @@
     <style>
         body {
           font-family: Arial, sans-serif;
-          margin: 40px;
+          margin: 0;
           background-color: #f9f9f9;
         }
         .container {
           max-width: 800px;
-          margin: auto;
+          margin: 40px auto;
           background: white;
           padding: 20px;
           border-radius: 10px;
@@ -44,6 +44,32 @@
           color: #555;
           margin-bottom: 20px;
         }
+        /* Header (same as index.html) */
+        .site-header {
+          font-family: 'Fira Sans', sans-serif;
+          background: #fff;
+          border-bottom: 1px solid #e8e8e8;
+          min-height: 55px;
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
+        .site-header .container {
+          max-width: none;
+          margin: 0;
+          padding: 1rem 15px;
+          background: transparent;
+          border-radius: 0;
+        }
+        .mypage-link {
+          text-decoration: none;
+          font-weight: 500;
+          color: #333;
+        }
+        .mypage-link:hover {
+          text-decoration: none;
+          color: #007bff;
+        }
     </style>
 </head>
 <body>
@@ -52,8 +78,9 @@
         <div class="container d-flex justify-content-center py-3">
             <nav>
                 <a class="mypage-link px-3" href="../index.html">Home</a>
-                <a class="mypage-link px-3" href="../publications/index.html">Publications</a>
-                <a class="mypage-link px-3" href="../index.html">News</a>
+                <a class="mypage-link px-3" href="index.html">Publications</a>
+                <a class="mypage-link px-3" href="../index.html#news">News</a>
+                <a class="mypage-link px-3" href="../hobbies/index.html">Hobbies</a>
             </nav>
         </div>
     </header>
