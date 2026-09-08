@@ -20,7 +20,8 @@
           font-weight: 500;
           color: #333;
         }
-        .mypage-link:hover {
+        .mypage-link:hover,
+        .mypage-link[aria-current] {
           text-decoration: none;
           color: #007bff;
         }
@@ -125,7 +126,7 @@
     <header class="site-header">
         <div class="container d-flex justify-content-center py-3">
             <nav>
-                <a class="mypage-link px-3" href="#home">Home</a>
+                <a class="mypage-link px-3" href="#home" aria-current="location">About</a>
                 <a class="mypage-link px-3" href="publications/index.html">Publications</a>
                 <a class="mypage-link px-3" href="#news">News</a>
                 <a class="mypage-link px-3" href="hobbies/index.html">Hobbies</a>
@@ -143,6 +144,8 @@
               <div class="bio-info">
                 <p>I'm a 5th year Ph.D. Candidate in the Department of Electrical Engineering and Computer Science at the University of Tennessee, Knoxville, advised by Dr. <a href="https://doowon.github.io/">Doowon Kim</a>. My research interests lie in adversarial attack and defense methods, particularly concerning websites and large language models.</p>
         
+                <p class="highlight">I am seeking full-time positions, postdoctoral opportunities, and internships in AI and cybersecurity.</p>
+
                 <div class="row">
                   <div class="col-md-6">
                     <h5>Research Interests</h5>
@@ -198,5 +201,23 @@
     </section>
 
 
+    <script>
+        const sectionLinks = document.querySelectorAll('.site-header a[href^="#"]');
+
+        function updateActiveSection() {
+            const activeHash = window.location.hash === '#news' ? '#news' : '#home';
+            sectionLinks.forEach((link) => {
+                if (link.getAttribute('href') === activeHash) {
+                    link.setAttribute('aria-current', 'location');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        window.addEventListener('hashchange', updateActiveSection);
+        window.addEventListener('pageshow', updateActiveSection);
+        updateActiveSection();
+    </script>
 </body>
 </html>

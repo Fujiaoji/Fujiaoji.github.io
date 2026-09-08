@@ -31,7 +31,8 @@
           color: #333;
           padding: 0 1rem;
         }
-        .mypage-link:hover {
+        .mypage-link:hover,
+        .mypage-link[aria-current] {
           text-decoration: none;
           color: #007bff;
         }
@@ -42,10 +43,10 @@
     <header class="site-header">
         <div class="container">
             <nav>
-                <a class="mypage-link" href="../index.html">Home</a>
+                <a class="mypage-link" href="../index.html#home">About</a>
                 <a class="mypage-link" href="../publications/index.html">Publications</a>
                 <a class="mypage-link" href="../index.html#news">News</a>
-                <a class="mypage-link" href="index.html">Hobbies</a>
+                <a class="mypage-link" href="index.html" aria-current="page">Hobbies</a>
             </nav>
         </div>
     </header>
