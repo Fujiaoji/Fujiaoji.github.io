@@ -17,16 +17,16 @@
         
     <style>
         body {
-          font-family: Arial, sans-serif;
+          font-family: 'Fira Sans', sans-serif;
+          line-height: 1.6;
+          color: #333;
           margin: 0;
-          background-color: #f9f9f9;
+          background: #fff;
         }
         .container {
           /* Use Bootstrap's responsive container widths (same as index.html) */
           margin: 40px auto;
-          background: white;
           padding: 20px;
-          border-radius: 10px;
         }
         a {
           text-decoration: none;
@@ -61,6 +61,20 @@
         .pub-list li .badge {
           margin-right: 4px;
           vertical-align: middle;
+        }
+        /* Each entry: title / venue + tags / authors, one line each */
+        .pub-title {
+          font-weight: 500;
+        }
+        .pub-meta {
+          font-size: 14px;
+          color: #555;
+        }
+        .pub-meta .venue {
+          margin-right: 6px;
+        }
+        .pub-authors {
+          font-size: 14px;
         }
         /* Lightweight tags replacing the black badges */
         .tag {
@@ -141,62 +155,80 @@
         </div>
 
         <ul class="pub-list">
-            <li><a href="https://arxiv.org/abs/2610.30226"><span class="badge badge-info">arXiv '26</span></a>
-                PhishGen: Understanding LLM Capabilities in Automated Phishing Website Generation.
-                <div class="pub-authors"><span class="advisor">Doowon Kim</span>, <span class="me">Fujiao Ji</span>, Yerim Kim, Yena Cho, Seonhye Park, and Hyoungshick Kim.</div>
-                arXiv preprint, 2026.
-                <span class="tag">Preprint</span>
-                <a href="https://arxiv.org/pdf/2610.30226"><span class="tag">PDF</span></a>
+            <li>
+                <div class="pub-title"><a href="https://arxiv.org/abs/2610.30226"><span class="badge badge-info">arXiv '26</span></a> PhishGen: Understanding LLM Capabilities in Automated Phishing Website Generation.</div>
+                <div class="pub-meta">
+                    <span class="venue">arXiv preprint, 2026.</span>
+                    <span class="tag">Preprint</span>
+                    <a href="https://arxiv.org/pdf/2610.30226"><span class="tag">PDF</span></a>
+                </div>
+                <div class="pub-authors"><span class="me">Fujiao Ji</span>, Yerim Kim, Yena Cho, Seonhye Park, Hyoungshick Kim, and <span class="advisor">Doowon Kim</span>.</div>
             </li>
-            <li><a href="https://www.dimva.org/dimva2026/"><span class="badge badge-info">DIMVA '26</span></a>
-                Poster: Mind the Gap &mdash; Characterizing the Temporal Blind Spot Between GSB and DNS Resolution.
+            <li>
+                <div class="pub-title"><a href="https://www.dimva.org/dimva2026/"><span class="badge badge-info">DIMVA '26</span></a> Poster: Mind the Gap &mdash; Characterizing the Temporal Blind Spot Between GSB and DNS Resolution.</div>
+                <div class="pub-meta">
+                    <span class="venue">The 23rd Conference on Detection of Intrusions and Malware &amp; Vulnerability Assessment (DIMVA) 2026.</span>
+                    <span class="tag">P</span>
+                    <a href="https://arxiv.org/pdf/2607.06134"><span class="tag">PDF</span></a>
+                </div>
                 <div class="pub-authors">Tomer Gal, <span class="me">Fujiao Ji</span>, <span class="advisor">Doowon Kim</span>, and Harel Israel Berger.</div>
-                The 23rd Conference on Detection of Intrusions and Malware &amp; Vulnerability Assessment (DIMVA) 2026.
-                <span class="tag">P</span>
-                <a href="https://arxiv.org/pdf/2607.06134"><span class="tag">PDF</span></a>
             </li>
-            <li><a href="https://arxiv.org/abs/2511.09606"><span class="badge badge-info">arXiv '25</span></a>
-                How Can We Effectively Use LLMs for Phishing Detection?: Evaluating the Effectiveness of Large Language Model-based Phishing Detection Models.
+            <li>
+                <div class="pub-title"><a href="https://arxiv.org/abs/2511.09606"><span class="badge badge-info">arXiv '25</span></a> How Can We Effectively Use LLMs for Phishing Detection?: Evaluating the Effectiveness of Large Language Model-based Phishing Detection Models.</div>
+                <div class="pub-meta">
+                    <span class="venue">arXiv preprint, 2025.</span>
+                    <span class="tag">Preprint</span>
+                    <a href="https://arxiv.org/pdf/2511.09606"><span class="tag">PDF</span></a>
+                </div>
                 <div class="pub-authors"><span class="me">Fujiao Ji</span>, Phani Vadrevu, and <span class="advisor">Doowon Kim</span>.</div>
-                arXiv preprint, 2025.
-                <span class="tag">Preprint</span>
-                <a href="https://arxiv.org/pdf/2511.09606"><span class="tag">PDF</span></a>
             </li>
-            <li><a href="https://www.usenix.org/conference/usenixsecurity25"><span class="badge badge-info">USENIX Security '25</span></a>
-                Evaluating the Effectiveness and Robustness of Visual Similarity-based Phishing Detection Models.
+            <li>
+                <div class="pub-title"><a href="https://www.usenix.org/conference/usenixsecurity25"><span class="badge badge-info">USENIX Security '25</span></a> Evaluating the Effectiveness and Robustness of Visual Similarity-based Phishing Detection Models.</div>
+                <div class="pub-meta">
+                    <span class="venue">The 34th USENIX Security Symposium (USENIX Security) 2025.</span>
+                    <span class="tag">C</span>
+                    <a href="https://arxiv.org/pdf/2405.19598"><span class="tag">PDF</span></a>
+                    <a href="https://github.com/Fujiaoji/PhishingEval"><span class="tag">GitHub</span></a>
+                    <a href="https://moa-lab.net/evaluation-visual-similarity-based-phishing-detection-models/"><span class="tag">Website</span></a>
+                </div>
                 <div class="pub-authors"><span class="me">Fujiao Ji</span>, Kiho Lee, Hyungjoon Koo, Wenhao You, Euijin Choo, Hyoungshick Kim, and <span class="advisor">Doowon Kim</span>.</div>
-                The 34th USENIX Security Symposium (USENIX Security) 2025.
-                <span class="tag">C</span>
-                <a href="https://arxiv.org/pdf/2405.19598"><span class="tag">PDF</span></a> 
-                <a href="https://github.com/Fujiaoji/PhishingEval"><span class="tag">GitHub</span></a> 
-                <a href="https://moa-lab.net/evaluation-visual-similarity-based-phishing-detection-models/"><span class="tag">Website</span></a>
             </li>
-            <li><a href="https://www2025.thewebconf.org/"><span class="badge badge-info">WWW '25</span></a>
-                What's in Phishers: A Longitudinal Study of Security Configurations in Phishing Websites and Kits.
+            <li>
+                <div class="pub-title"><a href="https://www2025.thewebconf.org/"><span class="badge badge-info">WWW '25</span></a> What's in Phishers: A Longitudinal Study of Security Configurations in Phishing Websites and Kits.</div>
+                <div class="pub-meta">
+                    <span class="venue">The Web Conference 2025.</span>
+                    <span class="tag">C</span>
+                    <a href="https://dl.acm.org/doi/pdf/10.1145/3696410.3714710"><span class="tag">PDF</span></a>
+                </div>
                 <div class="pub-authors">Kyungchan Lim, Kiho Lee, <span class="me">Fujiao Ji</span>, Yonghwi Kwon, Hyoungshick Kim, and <span class="advisor">Doowon Kim</span>.</div>
-                The Web Conference 2025.
-                <span class="tag">C</span>
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3696410.3714710"><span class="tag">PDF</span></a> 
             </li>
-            <li><a href="https://arxiv.org/abs/2402.00689"><span class="badge badge-info">arXiv '24</span></a>
-                Ocassionally Secure: A Comparative Analysis of Code Generation Assistants.
+            <li>
+                <div class="pub-title"><a href="https://arxiv.org/abs/2402.00689"><span class="badge badge-info">arXiv '24</span></a> Ocassionally Secure: A Comparative Analysis of Code Generation Assistants.</div>
+                <div class="pub-meta">
+                    <span class="venue">arXiv preprint, 2024.</span>
+                    <span class="tag">Preprint</span>
+                    <a href="https://arxiv.org/pdf/2402.00689"><span class="tag">PDF</span></a>
+                </div>
                 <div class="pub-authors">Ran Elgedawy, Porter Dosch, John Sadik, Senjuti Dutta, Anuj Gautam, Konstantinos Georgiou, Farzin Gholamrezae, <span class="me">Fujiao Ji</span>, Kyungchan Lim, Qian Liu, and Scott Ruoti.</div>
-                arXiv preprint, 2024.
-                <span class="tag">Preprint</span>
-                <a href="https://arxiv.org/pdf/2402.00689"><span class="tag">PDF</span></a>
             </li>
-            <li>A comparative study on heterogeneous information network embeddings.
+            <li>
+                <div class="pub-title"><a href="https://journals.sagepub.com/home/ifs"><span class="badge badge-info">JIFS '20</span></a> A comparative study on heterogeneous information network embeddings.</div>
+                <div class="pub-meta">
+                    <span class="venue">Journal of Intelligent &amp; Fuzzy Systems, 2020.</span>
+                    <span class="tag">J</span>
+                    <a href="https://journals.sagepub.com/doi/pdf/10.3233/JIFS-191796"><span class="tag">PDF</span></a>
+                    <a href="paper2.html"><span class="tag">Website</span></a>
+                </div>
                 <div class="pub-authors"><span class="me">Fujiao Ji</span>, <span class="advisor">Zhongying Zhao</span>, Hui Zhou, Heng Chi, and Chao Li.</div>
-                Journal of Intelligent & Fuzzy Systems. 2020.
-                <span class="tag">J</span>
-                <a href="https://journals.sagepub.com/doi/pdf/10.3233/JIFS-191796"><span class="tag">PDF</span></a> 
-                <a href="paper2.html"><span class="tag">Website</span></a>
             </li>
-            <li>Identifying high influential users in social media by analyzing users' behaviors.
-                <div class="pub-authors"><span class="advisor">Zhongying Zhao</span>, Hui Zhou, Bijun Zhang, <span class="me">Fujiao Ji</span>, Chao Li.</div>
-                Journal of Intelligent & Fuzzy Systems. 2020.
-                <span class="tag">J</span>
-                <a href="https://journals.sagepub.com/doi/full/10.3233/JIFS-182512"><span class="tag">PDF</span></a> 
+            <li>
+                <div class="pub-title"><a href="https://journals.sagepub.com/home/ifs"><span class="badge badge-info">JIFS '20</span></a> Identifying high influential users in social media by analyzing users' behaviors.</div>
+                <div class="pub-meta">
+                    <span class="venue">Journal of Intelligent &amp; Fuzzy Systems, 2020.</span>
+                    <span class="tag">J</span>
+                    <a href="https://journals.sagepub.com/doi/full/10.3233/JIFS-182512"><span class="tag">PDF</span></a>
+                </div>
+                <div class="pub-authors"><span class="advisor">Zhongying Zhao</span>, Hui Zhou, Bijun Zhang, <span class="me">Fujiao Ji</span>, and Chao Li.</div>
             </li>
         </ul>
     </div>
