@@ -4,282 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies - Fujiao Ji</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700" rel="stylesheet">
     <style>
         body {
-          margin: 0;
-        }
-        /* Header (same as index.html) */
-        .site-header {
           font-family: 'Fira Sans', sans-serif;
+          line-height: 1.6;
+          color: #333;
+        }
+        .site-header {
           border-bottom: 1px solid #e8e8e8;
           min-height: 55px;
           position: sticky;
           top: 0;
           z-index: 1000;
           background: #fff;
-          margin-bottom: 40px;
         }
-        .site-header .container {
+        .site-header nav {
           display: flex;
+          flex-wrap: wrap;
           justify-content: center;
-          padding: 1rem 15px;
+          row-gap: 8px;
         }
         .mypage-link {
           text-decoration: none;
           font-weight: 500;
           color: #333;
-          padding: 0 1rem;
+          white-space: nowrap;
         }
         .mypage-link:hover,
         .mypage-link[aria-current] {
           text-decoration: none;
           color: #007bff;
         }
+        main {
+          padding: 60px 0;
+        }
+        h1 {
+          margin-bottom: 30px;
+          font-weight: 600;
+        }
+        .hobby-section {
+          margin-bottom: 30px;
+        }
+        .hobby-section h2 {
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+        .hobby-photos {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+        }
+        .hobby-photos figure {
+          margin: 0;
+        }
+        .hobby-photos img {
+          display: block;
+          width: 240px;
+          max-width: 100%;
+          height: 170px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        .hobby-photos figcaption {
+          margin-top: 6px;
+          font-size: 0.9rem;
+          color: #777;
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="site-header">
-        <div class="container">
-            <nav>
-                <a class="mypage-link" href="../index.html#home">About</a>
-                <a class="mypage-link" href="../publications/index.html">Publications</a>
-                <a class="mypage-link" href="../index.html#news">News</a>
-                <a class="mypage-link" href="../academia/index.html">Academia Service</a>
-                <a class="mypage-link" href="index.html" aria-current="page">Hobbies</a>
+        <div class="container d-flex justify-content-center py-3">
+            <nav aria-label="Main navigation">
+                <a class="mypage-link px-3" href="../index.html#home">About</a>
+                <a class="mypage-link px-3" href="../publications/index.html">Publications</a>
+                <a class="mypage-link px-3" href="../index.html#news">News</a>
+                <a class="mypage-link px-3" href="../academia/index.html">Academia Service</a>
+                <a class="mypage-link px-3" href="index.html" aria-current="page">Hobbies</a>
             </nav>
         </div>
     </header>
 
-<!-- <section id="hobbies" class="section">
-  <style>
-    #hobbies .hobby-img {
-      width: 100%;
-      max-width: 260px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-top: 10px;
-      margin-bottom: 8px;
-    }
+    <main>
+        <div class="container">
+            <h1>Hobbies</h1>
 
-    #hobbies .travel-img {
-      width: 100%;
-      max-width: 125px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-top: 10px;
-      margin-bottom: 8px;
-    }
+            <p class="mb-4">
+                Outside of research, I enjoy snowboarding, playing tennis, and traveling.
+                These activities help me relax, stay active, and explore new experiences.
+            </p>
 
-    #hobbies .hobby-card {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+            <section class="hobby-section" aria-labelledby="snowboarding">
+                <h2 id="snowboarding">Snowboarding</h2>
+                <p>
+                    Snowboarding is my favorite way to spend the winter. There's nothing
+                    like the feeling of carving down a fresh slope on a cold, sunny morning.
+                </p>
+                <div class="hobby-photos">
+                    <figure>
+                        <img src="pics/snowboarding.webp" alt="Snowboarding">
+                        <figcaption>Ober Mountain Resort</figcaption>
+                    </figure>
+                </div>
+            </section>
 
-    #hobbies .photo-caption {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 10px;
-    }
+            <!-- Tennis: text only for now; add a .hobby-photos block like the others when there is a photo -->
+            <section class="hobby-section" aria-labelledby="tennis">
+                <h2 id="tennis">Tennis</h2>
+                <p>
+                    I like playing tennis as a fun way to stay active. It's a great mix of
+                    strategy and exercise, and a nice excuse to spend time outdoors with friends.
+                </p>
+            </section>
 
-    #hobbies .travel-photo {
-      display: inline-block;
-      width: 48%;
-      max-width: 125px;
-      margin: 0 3px 20px 3px;
-      vertical-align: top;
-    }
-  </style>
-
-  <div class="container">
-    <h1>Hobbies</h1>
-
-    <p>
-      Outside of research, I enjoy snowboarding, playing tennis, and traveling.
-      These activities help me relax, stay active, and explore new experiences.
-    </p>
-
-    <div class="row mt-4">
-      <div class="col-md-4 hobby-card">
-        <h5 class="mt-3">Snowboarding</h5>
-        <img src="pics/snowboarding.webp" alt="Snowboarding" class="hobby-img">
-        <p class="photo-caption">Ober Mountain Resort</p>
-      </div>
-
-      <div class="col-md-4 hobby-card">
-        <h5 class="mt-3">Tennis</h5>
-        <p>I like playing tennis as a fun way to stay active.</p>
-      </div>
-
-      <div class="col-md-4 hobby-card">
-        <h5 class="mt-3">Travel</h5>
-
-        <div class="travel-photo">
-          <img src="pics/Tiantan.webp" alt="Temple of Heaven" class="travel-img">
-          <p class="photo-caption">Tian Tan (Temple of Heaven)</p>
+            <section class="hobby-section" aria-labelledby="travel">
+                <h2 id="travel">Travel</h2>
+                <p>
+                    I love exploring new places, from historic landmarks to modern city
+                    skylines. Every trip gives me a fresh perspective and new stories to tell.
+                </p>
+                <div class="hobby-photos">
+                    <figure>
+                        <img src="pics/Tiantan.webp" alt="Temple of Heaven">
+                        <figcaption>Tian Tan (Temple of Heaven)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="pics/diguodasha.webp" alt="Empire State Building">
+                        <figcaption>Empire State Building</figcaption>
+                    </figure>
+                </div>
+            </section>
         </div>
-
-        <div class="travel-photo">
-          <img src="pics/diguodasha.webp" alt="Empire State Building" class="travel-img">
-          <p class="photo-caption">Empire State Building</p>
-        </div>
-      </div>
-    </div>
-
-    <p>
-      <a href="../index.html">Back to Home</a>
-    </p>
-  </div>
-</section> -->
-
-<section id="hobbies" class="section">
-  <style>
-    #hobbies .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    #hobbies .intro {
-      text-align: center;
-      color: #444;
-      max-width: 640px;
-      margin: 0 auto 40px auto;
-    }
-
-    /* 每个爱好一行：左文字，右图片 */
-    #hobbies .hobby-row {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      margin-bottom: 48px;
-    }
-
-    #hobbies .hobby-text {
-      flex: 1;
-      text-align: left;
-    }
-
-    #hobbies .hobby-text h5 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-    }
-
-    #hobbies .hobby-text p {
-      color: #555;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    #hobbies .hobby-media {
-      flex: 0 0 auto;
-      display: flex;
-      gap: 14px;
-    }
-
-    #hobbies figure {
-      margin: 0;
-      text-align: center;
-    }
-
-    #hobbies .hobby-img {
-      width: 260px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      display: block;
-    }
-
-    #hobbies .travel-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 10px;
-      display: block;
-    }
-
-    #hobbies figcaption {
-      font-size: 0.85rem;
-      color: #777;
-      margin-top: 8px;
-    }
-
-    /* 窄屏时改为上下排列 */
-    @media (max-width: 700px) {
-      #hobbies .hobby-row {
-        flex-direction: column;
-        gap: 16px;
-      }
-      #hobbies .hobby-text {
-        text-align: center;
-      }
-      #hobbies .hobby-media {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-
-  </style>
-
-  <div class="container">
-    <p class="intro">
-      Outside of research, I enjoy snowboarding, playing tennis, and traveling.
-      These activities help me relax, stay active, and explore new experiences.
-    </p>
-
-    <!-- Snowboarding：左文字 右图片 -->
-    <div class="hobby-row">
-      <div class="hobby-text">
-        <h5>Snowboarding</h5>
-        <p>
-          Snowboarding is my favorite way to spend the winter. There's nothing
-          like the feeling of carving down a fresh slope on a cold, sunny morning.
-        </p>
-      </div>
-      <div class="hobby-media">
-        <figure>
-          <img src="pics/snowboarding.webp" alt="Snowboarding" class="hobby-img">
-          <figcaption>Ober Mountain Resort</figcaption>
-        </figure>
-      </div>
-    </div>
-
-    <!-- Tennis：暂时只有文字，以后有照片可以照上面的格式加 figure -->
-    <div class="hobby-row">
-      <div class="hobby-text">
-        <h5>Tennis</h5>
-        <p>
-          I like playing tennis as a fun way to stay active. It's a great mix of
-          strategy and exercise, and a nice excuse to spend time outdoors with friends.
-        </p>
-      </div>
-    </div>
-
-    <!-- Travel：左文字 右两张图 -->
-    <div class="hobby-row">
-      <div class="hobby-text">
-        <h5>Travel</h5>
-        <p>
-          I love exploring new places, from historic landmarks to modern city
-          skylines. Every trip gives me a fresh perspective and new stories to tell.
-        </p>
-      </div>
-      <div class="hobby-media">
-        <figure>
-          <img src="pics/Tiantan.webp" alt="Temple of Heaven" class="travel-img">
-          <figcaption>Tian Tan (Temple of Heaven)</figcaption>
-        </figure>
-        <figure>
-          <img src="pics/diguodasha.webp" alt="Empire State Building" class="travel-img">
-          <figcaption>Empire State Building</figcaption>
-        </figure>
-      </div>
-    </div>
-
-  </div>
-</section>
+    </main>
 </body>
 </html>
